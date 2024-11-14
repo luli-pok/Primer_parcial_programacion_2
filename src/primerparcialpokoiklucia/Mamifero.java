@@ -12,7 +12,7 @@ class Mamifero extends Animal implements Vacunable{
     private double peso;
     private Dieta tipoDieta;
 
-    public Mamifero(double peso, Dieta tipoDieta, String nombre, int edad) {
+    public Mamifero(double peso, Dieta tipoDieta, String nombre, String edad) {
         super(nombre, edad);
         this.peso = peso;
         this.tipoDieta = tipoDieta;

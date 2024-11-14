@@ -12,7 +12,7 @@ class Reptil extends Animal {
     private String tipoEscama;
     private String regulacionTemperatura;
 
-    public Reptil(String nombre, int edad,  String tipoEscama, String regulacionTemperatura) {
+    public Reptil(String nombre, String edad,  String tipoEscama, String regulacionTemperatura) {
         super(nombre, edad);
         this.tipoEscama = tipoEscama;
         this.regulacionTemperatura = regulacionTemperatura;

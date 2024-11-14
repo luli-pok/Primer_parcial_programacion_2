@@ -9,10 +9,10 @@ import java.util.Objects;
  */
 abstract class Animal {
     private String nombre;
-    private int edad;
+    private String edad;
     
 
-    public Animal(String nombre, int edad) {
+    public Animal(String nombre, String edad) {
         this.nombre = nombre;
         this.edad = edad;
         
@@ -22,7 +22,7 @@ abstract class Animal {
         return nombre;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
      @Override

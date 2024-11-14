@@ -15,10 +15,10 @@ public class PrimerParcialPokoikLucia {
         // Crear un zoológico
         Zologico zoo = new Zologico(); 
 
-        Mamifero leon = new Mamifero(145.6, Dieta.CARNIVORO, "Simba", 6);
-        Ave aguila = new Ave(15.7, "Eze", 4);
-        Reptil cocodrilo = new Reptil("Drago", 9, "Dura", "Sangre fria");
-        Mamifero elefante = new Mamifero(5000.0,Dieta.HERBIVORO,"Elefante",  10 );
+        Mamifero leon = new Mamifero(145.6, Dieta.CARNIVORO, "Simba", "6");
+        Ave aguila = new Ave(15.7, "Eze", "4");
+        Reptil cocodrilo = new Reptil("Drago", "9", "Dura", "Sangre fria");
+        Mamifero elefante = new Mamifero(5000.0,Dieta.HERBIVORO,"Elefante",  "10" );
 
         try {
             // Agregar animales al zoológico

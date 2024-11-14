@@ -11,7 +11,7 @@ package primerparcialpokoiklucia;
 class Ave extends Animal implements Vacunable{
     private double envergaduraAlas ;
 
-    public Ave(double envergaduraAlas, String nombre, int edad) {
+    public Ave(double envergaduraAlas, String nombre, String edad) {
         super(nombre, edad);
         this.envergaduraAlas = envergaduraAlas;
     }
