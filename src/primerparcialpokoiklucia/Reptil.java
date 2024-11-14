@@ -12,8 +12,8 @@ class Reptil extends Animal {
     private String tipoEscama;
     private String regulacionTemperatura;
 
-    public Reptil(String nombre, int edad, double peso, Dieta tipoDieta, String tipoEscama, String regulacionTemperatura) {
-        super(nombre, edad, peso, tipoDieta);
+    public Reptil(String nombre, int edad,  String tipoEscama, String regulacionTemperatura) {
+        super(nombre, edad);
         this.tipoEscama = tipoEscama;
         this.regulacionTemperatura = regulacionTemperatura;
     }
@@ -23,10 +23,7 @@ class Reptil extends Animal {
         return "Reptil{" + "tipoEscama=" + tipoEscama + ", regulacionTemperatura=" + regulacionTemperatura + '}';
     }
 
-    @Override
-    public void vacunar() {
-        
-    }
+    
 
     
     

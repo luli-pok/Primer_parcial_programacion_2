@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package primerparcialpokoiklucia;
+
+import java.util.Objects;
 
 /**
  *
@@ -11,14 +10,12 @@ package primerparcialpokoiklucia;
 abstract class Animal {
     private String nombre;
     private int edad;
-    private double peso;
-    private Dieta tipoDieta;
+    
 
-    public Animal(String nombre, int edad, double peso, Dieta tipoDieta) {
+    public Animal(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
-        this.peso = peso;
-        this.tipoDieta = tipoDieta;
+        
     }
 
      public String getNombre() {
@@ -28,18 +25,31 @@ abstract class Animal {
     public int getEdad() {
         return edad;
     }
-
-    public double getPeso() {
-        return peso;
+     @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null){
+            return false;
+        }
+        if(obj instanceof String str){
+            return str.equals(nombre);
+        }
+        if(obj instanceof Animal a){
+            return nombre.equals(a.nombre) && edad.equals(a.edad);
+        }
+        return false;
     }
-
-    public Dieta getTipoDieta() {
-        return tipoDieta;
-    }
-    
-    abstract public void vacunar();
 
     @Override
-    public abstract String toString();
+    public int hashCode() {
+        return Objects.hash(nombre, edad);
+    }
+    
+    
+    
+
+    
     
 }

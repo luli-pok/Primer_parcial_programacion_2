@@ -8,13 +8,15 @@ package primerparcialpokoiklucia;
  *
  * @author Usuario
  */
-class Ave extends Animal {
-    private double envergaduraAlas;
+class Ave extends Animal implements Vacunable{
+    private double envergaduraAlas ;
 
-    public Ave(String nombre, int edad, double peso, Dieta tipoDieta, double envergaduraAlas) {
-        super(nombre, edad, peso, tipoDieta);
+    public Ave(double envergaduraAlas, String nombre, int edad) {
+        super(nombre, edad);
         this.envergaduraAlas = envergaduraAlas;
     }
+
+    
 
     public void vacunar() {
         System.out.println("El ave " + getNombre() + " ha sido vacunada.");

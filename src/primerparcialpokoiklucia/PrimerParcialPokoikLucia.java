@@ -10,28 +10,34 @@ package primerparcialpokoiklucia;
  */
 public class PrimerParcialPokoikLucia {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         // Crear un zoológico
         Zologico zoo = new Zologico(); 
 
-        // Crear algunos animales
-        Animal leon = new Mamifero("Tigre", 5, 190.5, Dieta.CARNIVORO);
-        Animal aguila = new Ave("Alcon", 3, 15.2, Dieta.CARNIVORO, 2.1);
-        Animal iguana = new Reptil("Lagartija", 2, 3.4, Dieta.HERBIVORO, "Escamas suaves", "Ectotérmico");
+        Mamifero leon = new Mamifero(145.6, Dieta.CARNIVORO, "Simba", 6);
+        Ave aguila = new Ave(15.7, "Eze", 4);
+        Reptil cocodrilo = new Reptil("Drago", 9, "Dura", "Sangre fria");
+        Mamifero elefante = new Mamifero(5000.0,Dieta.HERBIVORO,"Elefante",  10 );
 
-        // Agregar animales al zoológico
-        zoo.agregarAnimal(leon);
-        zoo.agregarAnimal(aguila);
-        zoo.agregarAnimal(iguana);
+        try {
+            // Agregar animales al zoológico
+            zoo.agregarAnimal(leon);
+            zoo.agregarAnimal(aguila);
+            zoo.agregarAnimal(cocodrilo);
+            zoo.agregarAnimal(elefante);
 
-        // Mostrar los animales en el zoológico
-        System.out.println("Animales en el zoológico:");
+            // Intentar agregar un animal duplicado para probar la excepción
+            zoo.agregarAnimal(leon);  // Esto lanzará AnimalRepetidoException
+        } catch (AnimalDuplicadoExeption e) {
+            System.out.println(e.getMessage());
+        }
+
+        // Mostrar todos los animales en el zoológico
+        System.out.println("Animales en el Zoológico:");
         zoo.mostrarAnimales();
 
-        // Vacunar a los animales
+        // Vacunar los animales que se pueden vacunar
         System.out.println("\nVacunando animales:");
         zoo.vacunarAnimales();
     }

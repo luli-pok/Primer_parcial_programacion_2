@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package primerparcialpokoiklucia;
 
 import java.util.ArrayList;
@@ -33,14 +30,15 @@ public class Zologico {
     }
 
     // Método para vacunar a todos los animales vacunables
-    public void vacunarAnimales() {
-        for (Animal a : animales) {
-            try {
-                a.vacunar();
-            } catch (UnsupportedOperationException e) {
-                System.out.println("El animal " + a.getNombre() + " no puede ser vacunado.");
+     public void vacunarAnimales() {
+        for (Animal animal : animales) {
+            if (animal instanceof Vacunable) {
+                ((Vacunable) animal).vacunar();
+            } else {
+                System.out.println(animal.getNombre() + " no se puede vacunar.");
             }
         }
+    
     }
     
 }

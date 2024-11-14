@@ -8,17 +8,26 @@ package primerparcialpokoiklucia;
  *
  * @author Usuario
  */
-class Mamifero extends Animal {
-    public Mamifero(String nombre, int edad, double peso, Dieta tipoDieta) {
-        super(nombre, edad, peso, tipoDieta);
-    }
+class Mamifero extends Animal implements Vacunable{
+    private double peso;
+    private Dieta tipoDieta;
 
+    public Mamifero(double peso, Dieta tipoDieta, String nombre, int edad) {
+        super(nombre, edad);
+        this.peso = peso;
+        this.tipoDieta = tipoDieta;
+    }
+    
+    @Override
     public void vacunar() {
         System.out.println("El mamífero " + getNombre() + " ha sido vacunado.");
     }
 
+   
+
     @Override
     public String toString() {
-        return "Mamifero{"+ "Peso: " + getPeso() + "kg, Dieta: " + getTipoDieta();
+        return "Mamifero{" + "peso=" + peso + ", tipoDieta=" + tipoDieta + '}';
     }
+    
 }
